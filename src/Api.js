@@ -5,7 +5,7 @@ const basicFetch = async (endpoint) => {
 }
 
 const api = {
-    getDolar: async () => {        
+    getDolar: async () => {
         return await basicFetch("https://economia.awesomeapi.com.br/all/USD");
     },
     getPokemon: async (pokemonId) => {

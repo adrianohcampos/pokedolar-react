@@ -1,7 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 
-function Pokemon(item) {    
+function Pokemon(item) {
 
     let type = []
     let types = item.item.types;
@@ -11,7 +11,6 @@ function Pokemon(item) {
     }
 
     return (
-        
         <div>
             <Helmet>
                 <title>{`PokeDólar - #${item.item.id} ${item.item.name.toUpperCase()}`} </title>
@@ -19,7 +18,7 @@ function Pokemon(item) {
             </Helmet>
             <img src={`https://assets.pokemon.com/assets/cms2/img/pokedex/full/${item.item.id}.png`} alt="Sprite of roggenrola" className="w-75" />
             <h2> $ 1 - R$ {item.item.money.real}</h2>
-            <h1> {item.item.name.toUpperCase()} </h1>            
+            <h1> {item.item.name.toUpperCase()} </h1>
             <ul className="list-group text-start">
                 <li className="list-group-item"> <i className="bi bi-check-lg"></i> Name: {item.item.name} </li>
                 <li className="list-group-item"> <i className="bi bi-check-lg"></i> Number: {item.item.id} </li>
@@ -30,6 +29,6 @@ function Pokemon(item) {
             <div className="text-muted"><small>UPDATE {item.item.money.update}</small></div>
         </div>
     );
-  }
-  
+}
+
 export default Pokemon;
