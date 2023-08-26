@@ -20,7 +20,7 @@ function App() {
         let media = (Number(usd.high) + Number(usd.high)) / 2;
         let dolar = Math.round(media * 100) / 100;
         let real = dolar.toFixed(2);
-        let idpokemon = dolar * 100;
+        let idpokemon = Math.round(dolar * 100);       
 
         const pokemom = await Api.getPokemon(idpokemon);
         let update = usd.create_date;
